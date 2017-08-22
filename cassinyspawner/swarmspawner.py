@@ -121,7 +121,7 @@ class SwarmSpawner(Spawner):
 #            m = hashlib.md5()
 #            m.update(self.user.name.encode('utf-8'))
 #            self._service_owner = m.hexdigest()
-            self._service_owner = self.user.name.encode('utf-8')
+            self._service_owner = self.user.name
         return self._service_owner
 
     @property
