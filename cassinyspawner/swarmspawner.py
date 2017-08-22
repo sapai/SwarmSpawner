@@ -118,9 +118,10 @@ class SwarmSpawner(Spawner):
     @property
     def service_owner(self):
         if self._service_owner is None:
-            m = hashlib.md5()
-            m.update(self.user.name.encode('utf-8'))
-            self._service_owner = m.hexdigest()
+#            m = hashlib.md5()
+#            m.update(self.user.name.encode('utf-8'))
+#            self._service_owner = m.hexdigest()
+            self.service_owner = self.user.name.encode('utf-8')
         return self._service_owner
 
     @property
